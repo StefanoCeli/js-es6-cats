@@ -27,6 +27,7 @@ section ul{
 section ul li{
     padding-bottom: 20px;
     font-size: 20px;
+    font-weight: 600;
     display: flex;
     justify-content: space-around;
 }

@@ -84,7 +84,20 @@ $(document).ready(function(){
      gattiFemmine.forEach(gatto => $('#milestone-2 .femmine ul').append(stampaLista(gatto.colore,gatto.nome,gatto.fiocco.colore,gatto.fiocco.opacity)));
 
      //unisco i due array in un unico array e lo destrutturo
-   
+     const gattiOrdinati = [...gattiFemmine,...gattiMaschi];
+     
+     const newGatti2 = gattiOrdinati.map(gatto => {
+          let nome = gatto.nome;
+          let colore = gatto.colore;
+          let fioccoColore= gatto.fiocco.colore;
+          let opacity= gatto.fiocco.opacity;
+          return {nome,colore,fioccoColore,opacity}
+     });
+     console.log(newGatti2);
+
+     newGatti2.forEach(gatto => $('#milestone-3 ul').append(stampaLista(gatto.colore,gatto.nome,gatto.fioccoColore,gatto.opacity)));
+     
+     
 });
 //funzione per stampare a video 
 const stampaLista = (colore,nome,...fiocco)=>{
@@ -98,7 +111,7 @@ const stampaLista = (colore,nome,...fiocco)=>{
           `
      }
      const html= `
-               <li>
+               <li style= "color:${fiocco[0]};">
                     <i class="fas fa-cat" style="color:${colore}";></i>
                     ${fioccoStr}
                     <span>${nome}</span>
