@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: mediumslateblue;
+}
+.container{
+    width: 500px;
+    margin: 100px auto;
+}
+section{
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 25px;
+}
+section h2{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+section ul{
+    list-style: none;
+   
+}
+section ul li{
+    padding-bottom: 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+}
